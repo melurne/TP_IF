@@ -33,3 +33,10 @@ EXPR :		EXPR '&' EXPR
 |		INTERRUPTEUR
 ;	
 
+eq_circuit(in1,b,c) returns (out,o2)
+	out=(in1 & b)|c;
+	o2=(c&in1);
+end
+
+descr()
+eval(true,true,false)
