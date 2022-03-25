@@ -11,8 +11,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Circuit {
-    String nom;
-    List<Composant> composants = new ArrayList<Composant>();
+    protected String nom;
+    protected List<Composant> composants = new ArrayList<Composant>();
     protected SondesTable tableSondes = new SondesTable();
 
     public Circuit() {}

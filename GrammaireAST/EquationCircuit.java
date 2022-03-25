@@ -1,8 +1,10 @@
-import circuit;
+import circuits.*;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
+
 
 public class EquationCircuit extends Circuit {
     LinkedHashMap<String,Interrupteur> inputs;
