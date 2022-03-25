@@ -68,7 +68,9 @@ expr returns [Composant c] :
 |	e1 = expr OR e2 = expr {$c = new Or(); ((Or)($c)).setIn1($e1.c); ((Or)($c)).setIn2($e2.c); circ.addComposant($c);}
 | 	NOT e = expr {$c = new Not(); ((Not)($c)).setIn($e.c); circ.addComposant($c);}
 |	LPAR e = expr RPAR {$c = $e.c;}
-| 	IDENTIFIANT {$c = circ.getInput($IDENTIFIANT.getText());}
+| 	IDENTIFIANT { $c = circ.getInput($IDENTIFIANT.getText()); }
+|	TRUE { $c = new Interrupteur(""); ((Interrupteur)($c)).on(); }
+| 	FALSE { $c = new Interrupteur(""); ((Interrupteur)($c)).off(); }
 ;
  	
 commandes : 

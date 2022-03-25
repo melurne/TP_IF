@@ -33,9 +33,10 @@ EXPR :		EXPR '&' EXPR
 |		INTERRUPTEUR
 ;	
 
-eq_circuit(in1,b,c) returns (out,o2)
-	out=(in1 & b)|c;
+eq_circuit(in1,b,c) returns (out,o2,o3)
+	out=(in1 & b)|true;
 	o2=(c&in1);
+	o3=false;
 end
 
 descr()
